@@ -5,13 +5,13 @@ public class Carta {
     private String valor;
     private String naipe;
     private int peso;
-    private String imagem;
+ //   private String imagem;
 
     public Carta(String valor, String naipe) {
         this.valor = valor;
         this.naipe = naipe;
         this.peso = definirPeso(valor);
-        this.imagem = gerarCaminhoImagem(valor, naipe);
+//        this.imagem = gerarCaminhoImagem(valor, naipe);
     }
 
     private int definirPeso(String valor) {
@@ -24,18 +24,18 @@ public class Carta {
         }
     }
 
-    private String gerarCaminhoImagem(String valor, String naipe) {
+ //   private String gerarCaminhoImagem(String valor, String naipe) {
         // Remover símbolos e padronizar o nome i tals
-        String naipeFormatado = switch (naipe) {
-            case "♠ESPADAS" -> "ESPADAS";
-            case "♥COPAS" -> "COPAS";
-            case "♦OUROS" -> "OUROS";
-            case "♣PAUS" -> "PAUS";
-            default -> "";
-        };
+ //       String naipeFormatado = switch (naipe) {
+ //           case "♠ESPADAS" -> "ESPADAS";
+ //           case "♥COPAS" -> "COPAS";
+ //           case "♦OUROS" -> "OUROS";
+ //           case "♣PAUS" -> "PAUS";
+ //           default -> "";
+ //       };
 
-        return "/cartas/" + valor + "_" + naipeFormatado + ".png";
-    }
+ //       return "/cartas/" + valor + "_" + naipeFormatado + ".png";
+ //   }
 
     public String getValor() {
         return valor;
@@ -54,10 +54,10 @@ public class Carta {
         return valor + " " + naipe;
     }
 
-    public String getImagem() {
-        return "/cartas/" + valor + "_" + naipe.replace("♠", "ESPADAS")
-                .replace("♥", "COPAS")
-                .replace("♦", "OUROS")
-                .replace("♣", "PAUS") + ".png";
-    }
+//    public String getImagem() {
+//        return "/cartas/" + valor + "_" + naipe.replace("♠", "ESPADAS")
+//                .replace("♥", "COPAS")
+//                .replace("♦", "OUROS")
+//                .replace("♣", "PAUS") + ".png";
+//    }
 }
